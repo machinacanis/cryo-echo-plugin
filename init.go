@@ -67,14 +67,14 @@ func (p *CryoPluginEcho) Init(bot *cryo.Bot) error {
 		AddRule(GroupAtMeRule).
 		Handle(func(e *cryo.GroupMessageEvent) {
 			msg := e.GetMessage()
-			p.bot.Send(e, msg)
+			e.Send(msg)
 		})
 	p.responsers = append(p.responsers, groupResponser)
 	privateResponser := p.bot.
 		OnType(cryo.PrivateMessageEventType).
 		Handle(func(e *cryo.PrivateMessageEvent) {
 			msg := e.GetMessage()
-			p.bot.Send(e, msg)
+			e.Send(msg)
 		})
 	p.responsers = append(p.responsers, privateResponser)
 
