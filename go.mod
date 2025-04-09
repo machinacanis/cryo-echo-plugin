@@ -1,4 +1,4 @@
-module github.com/machinacanis/cryo-echo-plugin
+module github.com/machinacanis/cryo-plugin-echo
 
 go 1.24
 

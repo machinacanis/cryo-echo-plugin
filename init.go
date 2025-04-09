@@ -1,4 +1,4 @@
-package CryoEcho
+package CryoPluginEcho
 
 import (
 	"github.com/machinacanis/cryo"
@@ -57,7 +57,7 @@ func (p *CryoPluginEcho) Init(bot *cryo.Bot) error {
 	// 初始化插件
 	p.bot = bot
 	p.pluginName = "cryo_plugin_echo"
-	p.pluginVersion = "1.0.0"
+	p.pluginVersion = "1.0.1"
 	p.pluginDescription = "一个简单的示例插件"
 	p.pluginAuthor = "MachinaCanis"
 	p.isEnable = false
@@ -81,6 +81,4 @@ func (p *CryoPluginEcho) Init(bot *cryo.Bot) error {
 	return nil
 }
 
-func Plugin() *CryoPluginEcho {
-	return &CryoPluginEcho{}
-}
+var Instance = &CryoPluginEcho{} // 插件实例
