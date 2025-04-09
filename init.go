@@ -64,7 +64,7 @@ func (p *CryoPluginEcho) Init(bot *cryo.Bot) error {
 
 	groupResponser := p.bot.
 		OnType(cryo.GroupMessageEventType).
-		AddRule(GroupAtMeRule).
+		AddRule(cryo.ToMeRule()).
 		Handle(func(e *cryo.GroupMessageEvent) {
 			msg := e.GetMessage()
 			e.Send(msg)

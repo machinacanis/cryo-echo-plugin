@@ -29,7 +29,6 @@ var GroupAtMeRule = cryo.RuleFor(func(e *cryo.GroupMessageEvent) bool {
 				continue
 			}
 		}
-
 		// 将当前元素添加到新消息中
 		newmsg = append(newmsg, msg[i])
 	}
